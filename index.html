@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Javascript Katas 2</h2>
+
+    <script>
+        //Declare ADD function
+        function add(x, y) {
+            return x + y;
+        }
+        let stepOne = add(2, 4); //Stores the results of 2 + 4.
+
+        //Declare Multiply function
+        function multiply(a, b) {
+            let product = 0;
+            for (let times = 0; times < b; times++) {
+                product = add(a, product)
+            }
+            return product;
+        }
+        let stepTwo = multiply(stepOne, 8); // Stores the results of 8 times the result of the addition function.
+
+        //Declare Power function
+        function power(x, n) {
+            let product = 1;
+            for (let times = 0; times < n; times++) {
+                product = multiply(x, product)
+            }
+            return product;
+        }
+        let stepThree = power(2, 8); // Stores the results of the power of 2 to the 8th.
+
+        //Declare Factorial function
+        function factorial(num) {
+            let factor = 1;
+            for (let times = 1; times <= num; times++) {
+                factor = multiply(times, factor)
+            }
+            return factor;
+        }
+        let stepFour = factorial(4); //Stores the results of the factor 
+
+        //Declare fibonacci function // Store the two previous answers, then output the results up to the 8th index.//
+        function fibo(k) {
+            let fib = 0;
+            for (let times = 0; times <= k; times++) {
+                fib = add(times, k)
+            }
+            return fib;
+        }
+        let stepFive = fibo(8); // Stores the results of the fibonacci function
+    </script>
+
+
+
+    <p id="math"></p>
+    <button onclick="document.getElementById('math').innerHTML=stepOne;">Adding Numbers</button>
+
+    <p id="times"></p>
+    <button onclick="document.getElementById('times').innerHTML=stepTwo;">Multiplying Numbers</button>
+
+    <p id="expo"></p>
+    <button onclick="document.getElementById('expo').innerHTML=stepThree;">Power of Numbers</button>
+
+    <p id="fact"></p>
+    <button onclick="document.getElementById('fact').innerHTML=stepFour;">Factorial of Numbers</button>
+
+    <p id="bonacci"></p>
+    <button onclick="document.getElementById('bonacci').innerHTML=stepFive;">Fibonacci of Numbers</button>
+
+
+</body>
+
+</html>
