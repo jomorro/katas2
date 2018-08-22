@@ -43,8 +43,14 @@
 
         //Declare fibonacci function // Store the two previous answers, then output the results up to the 8th index.//
         function fibo(k) {
-            let fib = 0;
-            for (let times = 0; times <= k; times++) {
+            let first = 0;
+            let second = 1;
+            let fib = 1;
+            
+            for (let times = 2; times <= k; times++) {
+                fib = first + second;
+                first = second;
+                second = next;
                 fib = add(times, k)
             }
             return fib;
