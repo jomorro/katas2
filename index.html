@@ -45,15 +45,14 @@
         function fibo(k) {
             let first = 0;
             let second = 1;
-            let fib = 1;
+            let next = 1;
             
             for (let times = 2; times <= k; times++) {
-                fib = first + second;
+                next = first + second;
                 first = second;
                 second = next;
-                fib = add(times, k)
             }
-            return fib;
+            return next;
         }
         let stepFive = fibo(8); // Stores the results of the fibonacci function
     </script>
